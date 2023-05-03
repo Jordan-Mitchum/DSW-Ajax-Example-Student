@@ -11,8 +11,15 @@
    
      <script>
        $(document).ready(function(){
-          //TODO: add your code here
-      });
+          $("button").click(function(){
+            $("#div1").load('/idk');
+          });
+        });
+       $(document).ready(function(){
+          $("#myinput").on("input", function(){
+            $("#div3").text($(this).val());
+          });
+       }); 
      </script>
   </head>
   <body>
@@ -23,11 +30,18 @@
     </div>
 
     <button>Update div 1</button>
-   
+
+
+    <input type="text" id="myinput"></input>
+    <button type="button" id="mybtn">Attempt to show value</button>
+
    <div id="div2">
       <h2>This text isn't updated.</h2>
     </div>
-
+    
+    <div id="div3">
+      <h2>This text is updated by the value.</h2>
+    </div>
    
   </body>
 </html>

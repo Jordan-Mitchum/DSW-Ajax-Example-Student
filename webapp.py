@@ -9,5 +9,10 @@ app.debug = True #Change this to False for production
 def home():
     return render_template('home.html')
 
-if __name__ == '__main__':
+@app.route('/idk')
+def idk():   
+    return Markup('<p> Hello </p>')
+
+
+if __name__== '__main__':
     app.run()
